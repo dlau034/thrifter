@@ -16,83 +16,52 @@
 
     <link rel="stylesheet" type="text/css" href="css/style.css" title="default" />  
 
-
     <!-- Appframework JS  -->    
-    <!-- If using jquery, need to uncomment this, comment out appframework.js - appframework uses zepto.js -->    
-<!--
-    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>    
-    <script type="text/javascript" charset="utf-8" src="js/jq.appframework.js"></script>    
--->
-  
-    <script type="text/javascript" charset="utf-8" src="js/appframework.js"></script>  
-    <script type="text/javascript" charset="utf-8" src="js/appframework.ui.js"></script>     
 
+    <script type="text/javascript" charset="utf-8" src="js/appframework.js"></script>    
+    <script type="text/javascript" charset="utf-8" src="js/appframework.ui.js"></script> 
+    
     <!-- Appframework Plugin JS -->
 
     <script type="text/javascript" charset="utf-8" src="js/af.carousel.js"></script>          
 
     <script>
-        // if(!((window.DocumentTouch&&document instanceof DocumentTouch)||'ontouchstart' in window)){
-        //     var script=document.createElement("script");
-        //     script.src="js/jq.desktopBrowsers.js";
-        //     var tag=$("head").append(script);
-        // }
-        var onDeviceReady = function () {
-            $.ui.blockPageScroll()
-        };
+        if(!((window.DocumentTouch&&document instanceof DocumentTouch)||'ontouchstart' in window)){
+            var script=document.createElement("script");
+            script.src="js/jq.desktopBrowsers.js";
+            var tag=$("head").append(script);
+        }
 
         $(document).ready(function(){
             $.ui.useOSThemes=false; //This must be set before $(document).ready() triggers;
-            $.ui.backButtonText="Back";            
+            $.ui.blockPageScroll(); //block the page from scrolling at the header/footer
+            $.ui.backButtonText="Back";
         });
-
     </script>    
-    <script src="js/jq.desktopBrowsers.js"></script> 
-
-    <!-- include touch on desktop browsers only, uncomment script above if you only want desktopBrowsers.js to load when on desktop-->
-
 </head>
 
-<body  id="list_feed">
+<body>
+
     <div id="afui">         
-        <!-- <div id="header"> -->
+        <div id="header">
             <!-- any additional HTML you want can go here -->
-        <!-- </div>           -->
-        
+        </div>          
 
         <div id="content"> <!-- Content Opening tag -->
 
-        <!-- Side Navigations -->
+        <div title='THRIFTER' id="main" data-tab="navbar_home" class="panel" >    
 
-        <nav id="main_nav"> <!-- Globel Nav -->
-            <!-- <h3 class='title'>Filters</h3> -->
-            <ul class="list">
-                <li class="divider">Filters</li>
-                <li class="filters btn" id="filter-none">Show all</li>
-                <li class="sort filters" data-sort="cost">Price: Lowest - Highest</li> 
-                <li class="sort filters" data-sort="name">Name</li>                            
-                <li class="divider">Show Only</li>
-                <li class="filters btn" id="filter-dress">Dresses</li>
-                <li class="filters btn" id="filter-skirt">Skirt</li>
-                <li class="filters btn" id="filter-pants">Pants</li>                    
-            </ul>
-        </nav>
-
-          <div title='THRIFTER' id="main" data-tab="navbar_home" class="panel feed_panel" data-nav="main_nav" >    
-
-            <div>
-                <input id="feed_search" class="search" type="search" placeholder="Looking for Something?" />
-                <!-- <ul class="sort-by"> -->
-                    <!-- <button class="sort btn" data-sort="name">Sort by name</button> -->
-                    <!-- <button class="sort btn" data-sort="category">Sort by category</button> -->
-                    <!-- <button class="sort btn" data-sort="cost">Sort by cost ^</button> -->
-                <!-- </ul> -->
-                <!-- <ul class="filter"> -->
-                    <!-- <button class="btn" id="filter-none">Show all</button> -->
-                    <!-- <button class="btn" id="filter-dress">Only show dress</button> -->
-                    <!-- <button class="btn" id="filter-skirt">Only show skirt</button> -->
-                    <!-- <button class="btn" id="filter-pants">Only show pants</button> -->
-                <!-- </ul>                         -->
+            <div id="list_feed">
+                <input class="search" placeholder="Search lovely things" />
+                <ul class="sort-by">
+                    <li class="sort btn" data-sort="name">Sort by name</li>
+                    <li class="sort btn" data-sort="category">Sort by category</li>
+                </ul>
+                <ul class="filter">
+                    <li class="btn" id="filter-none">Show all</li>
+                    <li class="btn" id="filter-games">Only show games</li>
+                    <li class="btn" id="filter-beverages">Only show beverages</li>
+                </ul>                        
 
                 <div class="list">
                     
@@ -102,12 +71,11 @@
                                     <img src="img/1.jpg" alt="">
                                 </a>                            
                                 <div class="boxing">
-                                    <h3 class="name">{{name}}</h3>
+                                    <h3 class="name">Victoria's Secret Blue Size Medium</h3>
                                     <p>Size: Medium</p>
-                                    <span class="category">dress</span>
+                                    <p>Tags: Dress, Blue, Vintage</p>
                                     <p>Store: Housing Work<p>                               
                                     <p>Location: Bushwich, Brooklyn</p> 
-                                    <p class="cost">$10</p> 
                                     <span class="time"><b>3hrs Left</b></span>
                                     <span class="price">Buy&nbsp<b>$25</b>&nbspBid&nbsp<b>$22</b></span>
                                     <div class="pull_bar"></div>
@@ -135,11 +103,10 @@
                                 <img src="img/2.jpg" alt="">
                             </a>                            
                             <div class="boxing">
-                                <h3 class="name">2. Beautiful Pleated Dress Sheath, Size 12, White</h3>
-                                <span class="category">skirt</span>
+                                <h3 class="name">Beautiful Pleated Dress Sheath, Size 12, White</h3>
+                                <p>Tags: HOFER, Festival dress, Linen, Cotton</p>
                                 <p>Store: Finderz Keeperz<p>    
-                                <p>Location: Upper East Side, Manhattan</p>                
-                                <p class="cost">$12</p>              
+                                <p>Location: Upper East Side, Manhattan</p>                             
                                 <span class="time"><b>3hrs Left</b></span>
                                 <span class="price">Buy&nbsp<b>$50</b>&nbspBid&nbsp<b>$39</b></span>
                                 <div class="pull_bar"></div>
@@ -164,14 +131,13 @@
                     <div class="slide_main">
                        <div class="slide_row">
                             <a class="photo_box" href="#photo">
-                                <img src="img/3.jpg" alt="">
+                                <img src="img/2.jpg" alt="">
                             </a>                            
                             <div class="boxing">
-                                <h3 class="name">3. Beautiful Pleated Dress Sheath, Size 12, White</h3>
-                                <span class="category">dress</span>
+                                <h3 class="name">Beautiful Pleated Dress Sheath, Size 12, White</h3>
+                                <p>Tags: HOFER, Festival dress, Linen, Cotton</p>
                                 <p>Store: Finderz Keeperz<p>    
                                 <p>Location: Upper East Side, Manhattan</p>                             
-                                <p class="cost">$15</p> 
                                 <span class="time"><b>3hrs Left</b></span>
                                 <span class="price">Buy&nbsp<b>$50</b>&nbspBid&nbsp<b>$39</b></span>
                                 <div class="pull_bar"></div>
@@ -196,14 +162,13 @@
                     <div class="slide_main">
                        <div class="slide_row">
                             <a class="photo_box" href="#photo">
-                                <img src="img/4.jpg" alt="">
+                                <img src="img/2.jpg" alt="">
                             </a>                            
                             <div class="boxing">
-                                <h3 class="name">4. Beautiful Pleated Dress Sheath, Size 12, White</h3>
-                                <span class="category">pants</span>
+                                <h3 class="name">Beautiful Pleated Dress Sheath, Size 12, White</h3>
+                                <p>Tags: HOFER, Festival dress, Linen, Cotton</p>
                                 <p>Store: Finderz Keeperz<p>    
                                 <p>Location: Upper East Side, Manhattan</p>                             
-                                <p class="cost">$18</p> 
                                 <span class="time"><b>3hrs Left</b></span>
                                 <span class="price">Buy&nbsp<b>$50</b>&nbspBid&nbsp<b>$39</b></span>
                                 <div class="pull_bar"></div>
@@ -228,15 +193,13 @@
                     <div class="slide_main">
                        <div class="slide_row">
                             <a class="photo_box" href="#photo">
-                                <img src="img/5.jpg" alt="">
+                                <img src="img/2.jpg" alt="">
                             </a>                            
                             <div class="boxing">
-                                <h3 class="name">5. Beautiful Pleated Dress Sheath, Size 12, White</h3>
-                                <span class="category">dress</span>
-                                <!-- <p class="category">dress</p> -->
+                                <h3 class="name">Beautiful Pleated Dress Sheath, Size 12, White</h3>
+                                <p>Tags: HOFER, Festival dress, Linen, Cotton</p>
                                 <p>Store: Finderz Keeperz<p>    
                                 <p>Location: Upper East Side, Manhattan</p>                             
-                                <p class="cost">$20</p> 
                                 <span class="time"><b>3hrs Left</b></span>
                                 <span class="price">Buy&nbsp<b>$50</b>&nbspBid&nbsp<b>$39</b></span>
                                 <div class="pull_bar"></div>
@@ -255,22 +218,16 @@
                             </div>
                        </div>
                     </div>  
-
-
 
         <!-- Item Group  -->
 
                 </div> <!-- list ends -->
-
-
-
             </div> <!-- panel ends -->
 
+            <div id="photo" data-tab="navbar_home" class="panel"> 
+                <h2>This is the item page</h2>
+                <img src="img/1.jpg" alt="">
 
-
-        </div> <!-- list feed (required for list.js) ends -->
-            
-            <div id="photo" data-tab="navbar_home" class="panel">    <img src="img/1.jpg" alt="">
             </div>
 
             <div id="buy" data-tab="navbar_home" class="panel" overflow="fixed" >
@@ -282,7 +239,7 @@
                     </div>
 
                     <div class="wrapper2">
-                        
+                        <p><b>Tags:</b> Necklace, Jewelry, Owl</p>
                         <p><b>Description:</b> Cute, pink and gold owl vintage necklace. Great for both casual and formal wear. In great condition. </p>
                     </div>
                     
@@ -295,61 +252,26 @@
                 </ul>
             </div>
 
-            <div id="bid"  data-tab="navbar_home" class="panel" overflow="fixed" >
+            <div id="bid" modal="true" data-tab="navbar_home" class="panel" overflow="fixed" >
                 <h1>This is the BID SCREEN</h1>
-            </div>    
+            </div>
 
-
+        </div> <!-- list feed (required for list.js) ends -->
     </div> <!-- content ends -->
 
     <!-- Footer Nav -->
-    <!-- ############################################################### -->
+        <!-- ############################################################### -->
 
     <div id="navbar">            
         <a href="#" data-transition="none" id='navbar_home' class='icon home' >Home</a>
         <a href="#photo" data-transition="none" id='navbar_profile' class='icon user'>MY PROFILE</a>
-        <a href="#storylist" data-transition="none" id='navbar_saves' class='icon heart' >MY SAVES</a>
+        <a href="#storylist" data-transition="none" id='navbar_saves' class='icon star' >MY SAVES</a>
 
     </div>              
 
-    <!-- Header Nav -->
-    <!-- ############################################################### -->
-
-    <div id="header">
-        <a id='menubadge' onclick='af.ui.toggleSideMenu()' class='menuButton'></a>
-    </div>    
-
-    <!-- <header id="Feed"> -->
-        <!-- <a id="backButton" onclick="$.ui.goBack()" class='button'>Go Back</a> -->
-            <!-- <h1>Custom Header</h1> -->
-
-    <!-- </header> -->
-
 </div> <!-- afui ends -->
-
-<script src="js/list.js"></script>
-<script src="js/handlebars.js"></script>
-
-    <script>
-
-        var url = 'https://api.meetup.com/2/open_events?&sign=true&topic=technology&zip=10018&page=10&key=3a6cc6c3779701f29577587e286f4b&callback=?'
-
-        $.getJSON(url, function(data) {
-            var data = data.results
-            console.log(data);
-
-            var template = Handlebars.compile( $('#template').html() );
-            
-            temp = template(data);
-
-            // console.log(temp);
-
-            $("#content").append( template(data) );
-            // $("#content").html( template(data));         
-        });
-        
-    </script>
-<script src="js/main.js" type="text/javascript" charset="utf-8" async defer></script>
+    <script src="js/list.js"></script>
+    <script src="js/main.js" type="text/javascript" charset="utf-8" async defer></script>
     
 </body>
 </html>

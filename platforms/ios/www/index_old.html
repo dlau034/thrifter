@@ -1,0 +1,370 @@
+<!DOCTYPE html><!--HTML5 doctype-->
+<html>
+<head>
+	<title>THRIFTTER</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />	
+
+	<!-- css  -->
+
+    <link rel="stylesheet" type="text/css" href="css/icons.css" /> 
+    <link rel="stylesheet" type="text/css" href="css/af.ui.css" title="default" />
+
+	<!-- custom css  -->    
+
+	<link rel="stylesheet" type="text/css" href="css/style.css" title="default" />	
+
+	<!-- Appframework JS  -->
+
+    <script type="text/javascript" charset="utf-8" src="js/appframework.js"></script>    
+    <script type="text/javascript" charset="utf-8" src="js/appframework.ui.js"></script>       	
+
+	<!-- Appframework Plugin JS -->
+
+    <script type="text/javascript" charset="utf-8" src="js/af.carousel.js"></script>           
+	<script>
+
+
+
+	    if(!((window.DocumentTouch&&document instanceof DocumentTouch)||'ontouchstart' in window)){
+	        var script=document.createElement("script");
+	        script.src="js/jq.desktopBrowsers.js";
+	        var tag=$("head").append(script);
+	    }
+
+	    $(document).ready(function(){
+			$.ui.useOSThemes=false; //This must be set before $(document).ready() triggers;
+			$.ui.blockPageScroll(); //block the page from scrolling at the header/footer
+			$.ui.backButtonText="Back";
+
+
+	    });
+
+	</script>
+<!--
+	<script type="text/javascript">
+	    /* This function runs once the page is loaded, but appMobi is not yet active */
+		var webRoot="./";
+		$.ui.autoLaunch=false;
+	    $.ui.resetScrollers=false;
+	    var init = function(){
+		   $.ui.backButtonText="Back";  
+		   window.setTimeout(function(){$.ui.launch();},1500);
+	       // $.ui.removeFooterMenu(); This would remove the bottom nav menu
+	    };
+	    document.addEventListener("DOMContentLoaded",init,false);  
+		$.ui.ready(function(){console.log('ready');});
+	   
+	    
+		
+	    /* This code is used to run as soon as appMobi activates */
+	    var onDeviceReady=function(){
+			AppMobi.device.setRotateOrientation("portrait");
+	        AppMobi.device.setAutoRotate(false);
+			webRoot=AppMobi.webRoot+"/";
+		    //hide splash screen
+		    // AppMobi.device.hideSplashScreen();	
+			
+	    };
+	    document.addEventListener("appMobi.device.ready",onDeviceReady,false);    
+	
+	</script>
+ -->
+</head>
+<body>
+	<div id="afui">			
+	    <div id="header">
+	        <!-- any additional HTML you want can go here -->
+	    </div>			
+
+
+		<div id="content"> <!-- Content Opening tag -->
+
+			<div title='THRIFTER' id="main" data-tab="navbar_home" class="panel" >
+
+		<!-- Item Group	 -->
+
+                    <div class="slide_main">
+                       <div class="slide_row">
+                            <a class="photo_box" href="#photo">
+                            	<img src="img/1.jpg" alt="">
+                            </a>                            
+                            <div class="boxing">
+	                            <h3>Victoria's Secret Blue Size Medium</h3>
+	                            <p>Size: Medium</p>
+	                            <p class="Dress">Tags: Dress, Blue, Vintage</p>
+                                <p>Store: Housing Work<p>	                            
+                                <p>Location: Bushwich, Brooklyn</p>	
+	                            <span class="time"><b>3hrs Left</b></span>
+	                            <span class="price">Buy&nbsp<b>$25</b>&nbspBid&nbsp<b>$22</b></span>
+								<div class="pull_bar"></div>
+								<div class="pull_bar"></div>                   
+                            </div>                            
+                        </div>
+                       <div class="slide_row">                            
+                       		<div class="boxing_right">
+								<div class="pull_bar_right"></div>
+								<div class="pull_bar_right"></div>                       			
+	                       		<p>DESCRIPTION: <br>
+	                       			The dress is a size small, but is very forgiving. It has cap sleeves, a V neckline in the front and back, and falls about 6" below the knee. 
+								</p>
+								<a href="#buy" class="btn button_buy">BUY $25</a>
+								<a href="#bid" class="btn button_buy">BID $22</a>
+                            </div>
+                       </div>
+                    </div>  
+
+		<!-- Item Group	 -->
+
+                    <div class="slide_main">
+                       <div class="slide_row">
+                            <a class="photo_box" href="#photo">
+                            	<img src="img/2.jpg" alt="">
+                            </a>                            
+                            <div class="boxing">
+	                            <h3>Beautiful Pleated Dress Sheath, Size 12, White</h3>
+	                            <p class="Skirt">Tags: Skirt, Blue, Vintage</p>
+                                <p>Store: Finderz Keeperz<p>	
+                                <p>Location: Upper East Side, Manhattan</p>	                            
+	                            <span class="time"><b>3hrs Left</b></span>
+	                            <span class="price">Buy&nbsp<b>$50</b>&nbspBid&nbsp<b>$39</b></span>
+								<div class="pull_bar"></div>
+								<div class="pull_bar"></div>                   
+                            </div>                            
+                        </div>
+                       <div class="slide_row">                            
+                       		<div class="boxing_right">
+								<div class="pull_bar_right"></div>
+								<div class="pull_bar_right"></div>                       			
+	                       		<p>DESCRIPTION: <br>
+	                       			Linen Dress, BUST 34", 86,3CM, WAIST 29", 73,7 CM, HIPS 64", 162,5 CM ,LENGTH 41", 104,1 CM, VERY GOOD EXCELLENT CONDITION
+								</p>
+								<a href="#buy" class="btn button_buy">BUY $50</a>
+								<a href="#bid" class="btn button_buy">BID $39</a>
+                            </div>
+                       </div>
+                    </div>  
+
+		<!-- Item Group	 -->
+
+                    <div class="slide_main">
+                       <div class="slide_row">
+                            <a class="photo_box" href="#photo">
+                            	<img src="img/3.jpg" alt="">
+                            </a>                            
+                            <div class="boxing">
+	                            <h3>Men's Jacket Blue - Levis</h3>
+	                            <p class="Dress">Tags: Dress, Blue, Vintage</p>
+                                <p>Store: Harlem Goodwill<p>	            
+                                <p>Location: West Harlem, Manhattan</p>	
+	                            <span class="time"><b>3hrs Left</b></span>
+	                            <span class="price">Buy&nbsp<b>$18</b>&nbspBid&nbsp<b>$16</b></span>
+								<div class="pull_bar"></div>
+								<div class="pull_bar"></div>                   
+                            </div>                            
+                        </div>
+                       <div class="slide_row">                            
+                       		<div class="boxing_right">
+								<div class="pull_bar_right"></div>
+								<div class="pull_bar_right"></div>                       			
+	                       		<p>DESCRIPTION: <br>
+	                       			Cute, pink and gold owl vintage necklace. Great for both casual and formal wear. In great condition. 
+								</p>
+								<a href="#buy" class="btn button_buy">BUY $18</a>
+								<a href="#bid" class="btn button_buy">BID $16</a>
+                            </div>
+                       </div>
+                    </div>                                       
+
+		<!-- Item Group	 -->
+
+                    <div class="slide_main">
+                       <div class="slide_row">
+                            <a class="photo_box" href="#photo">
+                            	<img src="img/7.jpg" alt="">
+                            </a>                            
+                            <div class="boxing">
+	                            <h3>High-Low Skirt XS/S (Lot Of 2)</h3>
+	                            <p class="Skirt">Tags: Dress, Blue, Vintage</p>
+                                <p>Store: Junk<p>	    
+                                <p>Location: Brooklyn, Manhattan</p>	                        
+	                            <span class="time"><b>3hrs Left</b></span>
+	                            <span class="price">Buy&nbsp<b>$29</b>&nbspBid&nbsp<b>$12</b></span>
+								<div class="pull_bar"></div>
+								<div class="pull_bar"></div>                   
+                            </div>                            
+                        </div>
+                       <div class="slide_row">                            
+                       		<div class="boxing_right">
+								<div class="pull_bar_right"></div>
+								<div class="pull_bar_right"></div>                       			
+	                       		<p>DESCRIPTION: <br>
+	                       			This is a listing for TWO asymmetrical/ High-low skirts, in turquoise and deep red orange. Size XS/S or waist sizes (24-27). 
+								</p>
+								<a href="#buy" class="btn button_buy">BUY $29</a>
+								<a href="#bid" class="btn button_buy">BID $12</a>
+                            </div>
+                       </div>
+                    </div> 
+
+		<!-- Item Group	 -->
+
+                    <div class="slide_main">
+                       <div class="slide_row">
+                            <a class="photo_box" href="#photo">
+                            	<img src="img/10.jpg" alt="">
+                            </a>                            
+                            <div class="boxing">
+	                            <h3>Owl Necklace</h3>
+	                            <p>Tags: Necklace, Jewelry, Owl</p>
+                                <p>Store: Junk<p>	      
+                                <p>Location: Midtown, Manhattan</p>	                        
+	                            <span class="time"><b>3hrs Left</b></span>
+	                            <span class="price">Buy&nbsp<b>$29</b>&nbspBid&nbsp<b>$15</b></span>
+								<div class="pull_bar"></div>
+								<div class="pull_bar"></div>                   
+                            </div>                            
+                        </div>
+                       <div class="slide_row">                            
+                       		<div class="boxing_right">
+								<div class="pull_bar_right"></div>
+								<div class="pull_bar_right"></div>                       			
+	                       		<p>DESCRIPTION: <br>
+	                       			Cute, pink and gold owl vintage necklace. Great for both casual and formal wear. In great condition. 
+								</p>
+								<a href="#buy" class="btn button_buy">BUY $29</a>
+								<a href="#bid" class="btn button_buy">BID $15</a>
+                            </div>
+                       </div>
+                    </div>  
+
+		<!-- Item Group	 -->
+
+                    <div class="slide_main">
+                       <div class="slide_row">
+                            <a class="photo_box" href="#photo">
+                            	<img src="img/6.jpg" alt="">
+                            </a>                            
+                            <div class="boxing">
+	                            <h3>Womens Cole Haan Red High Heel Size 10.5 NIKE AIR</h3>
+	                            <p>Tags: Heels, 3inch</p>
+                                <p>Store: Housing Work<p>	
+                                <p>Location: Midtown, Manhattan</p>	                            
+	                            <span class="time"><b>3hrs Left</b></span>
+	                            <span class="price">Buy&nbsp<b>$40</b>&nbspBid&nbsp<b>$35</b></span>
+								<div class="pull_bar"></div>
+								<div class="pull_bar"></div>                   
+                            </div>                            
+                        </div>
+                       <div class="slide_row">                            
+                       		<div class="boxing_right">
+								<div class="pull_bar_right"></div>
+								<div class="pull_bar_right"></div>                       			
+	                       		<p>DESCRIPTION: <br>
+	                       			Cute, pink and gold owl vintage necklace. Great for both casual and formal wear. In great condition. 
+								</p>
+								<a href="#buy" class="btn button_buy">BUY $40</a>
+								<a href="#bid" class="btn button_buy">BID $35</a>
+                            </div>
+                       </div>
+                    </div>                                       
+
+		<!-- Item Group	 -->
+
+                    <div class="slide_main">
+                       <div class="slide_row">
+                            <a class="photo_box" href="#photo">
+                            	<img src="img/5.jpg" alt="">
+                            </a>                            
+                            <div class="boxing">
+	                            <h3>Colleen Conrad Size S 4 6 Black Dress</h3>
+	                            <p>Tags: Sleeveless</p>
+                                <p>Store: Junk<p>	    
+                                <p>Location: Upper East Side, Manhattan</p>	                        
+	                            <span class="time"><b>3hrs Left</b></span>
+	                            <span class="price">Buy&nbsp<b>$20</b>&nbspBid&nbsp<b>$8</b></span>
+								<div class="pull_bar"></div>
+								<div class="pull_bar"></div>                   
+                            </div>                            
+                        </div>
+                       <div class="slide_row">                            
+                       		<div class="boxing_right">
+								<div class="pull_bar_right"></div>
+								<div class="pull_bar_right"></div>                       			
+	                       		<p>DESCRIPTION: <br>
+	                       			Pre-owned: An item that has been used or worn previously. See the seller’s listing for full details and description of any imperfections 
+								</p>
+								<a href="#buy" class="btn button_buy">BUY $20</a>
+								<a href="#bid" class="btn button_buy">BID $8</a>
+                            </div>
+                       </div>
+                    </div> 
+
+		<!-- Item Group	 -->                   
+
+			</div>
+
+			<div id="photo" data-tab="navbar_home" class="panel" > 
+				<!-- <h2>This is the item page</h2> -->
+				<img src="img/1.jpg" alt="">
+
+			</div>
+
+			<div id="buy" modal="true" data-tab="navbar_home" class="panel" overflow="fixed" >
+				<div class="modal_box">
+					<img src="img/1.jpg" alt="">
+					<div class="wrapper">
+						<h2>Victoria's Secret Blue Size Medium</h2>	                            
+						<h3><b>Buy Now:</b> $25</h3> 
+					</div>
+
+					<div class="wrapper2">
+						<p><b>Tags:</b> Necklace, Jewelry, Owl</p>
+                    	<p><b>Description:</b> Cute, pink and gold owl vintage necklace. Great for both casual and formal wear. In great condition. </p>
+					</div>
+					
+				</div>				
+					
+				<ul class="list inset">
+					<li><a href="#"><h3>Buy Now with Paypal</h3></a></li>
+					<li><a href="#"><h3>Buy Now with Debit</h3></a></li>
+					<li><a href="#"><h3>Buy Now with Credit</h3></a></li>
+				</ul>
+			</div>
+
+			<div id="bid" modal="true" data-tab="navbar_home" class="panel" overflow="fixed" >
+				<h1>This is the BID SCREEN</h1>
+			</div>
+
+		</div> <!-- Content ends -->
+
+		<!-- Footer Nav -->
+			<!-- ############################################################### -->
+
+        <div id="navbar">            
+            <a href="#events" data-transition="none" id='navbar_home' class='icon home' >Home</a>
+            <a href="#places" data-transition="none" id='navbar_profile' class='icon user'>MY PROFILE</a>
+            <a href="#storylist" data-transition="none" id='navbar_saves' class='icon star' >MY SAVES</a>
+
+        </div>					
+	</div> <!-- afui ends -->
+        <script>
+
+			var options={
+			   vertical:false, // page up/down
+			   horizontal:true, // page left/right
+			   // pagingDiv:null, // div to hold the dots for paging
+			   // pagingCssName:"carousel_paging", //classname for the paging dots
+			   // pagingCssNameSelected: "carousel_paging_selected", //classname for the selected page dots
+			   wrap:false //Creates a continuous classnamearousel
+			}
+
+			var carousel = $(".slide_main").carousel(options);
+        </script>
+
+
+</body>
+
+</html>

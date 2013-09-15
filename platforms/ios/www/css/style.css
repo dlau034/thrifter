@@ -1,3 +1,14 @@
+/* Stylesheet - Thriftly */
+
+/* af.ui.css overrides */
+/* Only even use set properties to inherit - This is only to avoid using !important all over the place because of af.ui.css */
+
+#afui #menu .list li, #afui #menu .list .divider, #afui #menu .list li:first-child, #afui #menu .list li:last-child { 
+	font-weight: inherit;
+}
+
+/* END */
+
 body {
 	font-family: "futura";
 }
@@ -20,8 +31,10 @@ h3 {
 	font-size: 0.9em!important;
 	color: #444;
 	font-family: "futura";
-
 }
+
+/* Hard Override on af.ui.css - Changes that is ok being applied globally */
+
 #afui #header .button {
 
 	border-radius: 0;
@@ -57,6 +70,33 @@ h3 {
 	top: 2px!important;
 	height: 47px;
 }
+#afui > #menu.tabletMenu {
+	background-color: #e1e1e1;
+	
+	border: none;
+	color: #333;
+	/*-webkit-box-shadow:  inset -3px 0px 3px rgba(0,0,0,0.2);*/
+	/*-moz-box-shadow:  inset -3px 0px 3px rgba(0,0,0,0.2);*/
+	/*box-shadow:  inset -3px 0px 3px rgba(0,0,0,0.2);*/
+}
+#afui .panel {
+	padding: 0;
+	background-color: none!important;
+}
+
+#afui #menu .list .divider {
+	background: #FDA275;
+}
+/* Feed Panel */
+
+.feed_panel {
+	background-color: #fff;	
+}
+.feed_panel .list {
+	border-top: 1px solid #ccc!important;
+}
+
+/* Slider on Feed Panel */
 
 .slide_main {
 	
@@ -114,15 +154,11 @@ h3 {
 }
 .boxing_right {
 	margin: 0.5em;
-	/*background-color: red;*/
 	display: block;
 	height: 100%;
 	position: relative;
 }
-#afui .panel {
-	padding: 0;
-	background-color: none!important;
-}
+
 .boxing .time {
 	position: absolute;
 	bottom: 0;
@@ -168,7 +204,8 @@ h3 {
 .boxing_right .pull_bar_right:first-child {
 	left: 4px;
 }
-/* Login PANEL */
+
+/* Login PANEL - Facebook / Twitter / Vender User */
 
 #login img {
 	width: 100%;
@@ -242,6 +279,31 @@ h3 {
 }
 .wrapper2 {
 	clear: both;
+}
+
+/* FEED PAGE FILTER PANELS */
+
+#feed_search {
+	/*width: 96%!important;*/
+	/*margin: 0.5em;*/
+	margin-bottom: 2px!important;
+	/*border:2px solid #999!important;*/
+	border:none!important;	
+}
+/*#feed_search input {
+	border-width:2px;
+}*/
+.filters {
+	border-color: #ccc!important;
+	font-weight: normal;
+}
+
+.filters:active {
+	background-color: #f68944;
+	color: white;
+}
+#afui #menu .list .divider {
+	color: white;
 }
 
 
