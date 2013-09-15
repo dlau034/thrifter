@@ -1,3 +1,8 @@
+$.ui.blockPageScroll()
+$.ui.useOSThemes=false;
+$.ui.backButtonText="Back";           
+
+
 function filter(){
     var options = {
         valueNames: [ 'name', 'cost', 'category' ]
@@ -45,7 +50,8 @@ function filter(){
         featureList.filter();
         console.log("none");
         return false;
-    });            
+    });       
+    console.log("filter")              
 };
 
 function slider(){
@@ -57,8 +63,14 @@ function slider(){
        // pagingCssNameSelected: "carousel_paging_selected", //classname for the selected page dots
        wrap:false //Creates a continuous classnamearousel
     }
-    var carousel = $(".slide_main").carousel(options);              
+    var carousel = $(".slide_main").carousel(options);     
+    console.log("slider")         
 }; 
 
-slider();  
-filter();        
+$(window).load(function() {
+    slider();
+    filter();
+});
+        
+
+

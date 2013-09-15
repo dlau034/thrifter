@@ -1,0 +1,336 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>THRIFTTER</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />  
+    <!-- css  -->
+
+    <link rel="stylesheet" type="text/css" href="css/icons.css" /> 
+    <link rel="stylesheet" type="text/css" href="css/af.ui.css" title="default" />
+
+    <!-- custom css  -->    
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" title="default" />  
+
+
+    <!-- Appframework JS  -->    
+    <!-- If using jquery, need to uncomment this, comment out appframework.js - appframework uses zepto.js -->    
+<!--
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>    
+    <script type="text/javascript" charset="utf-8" src="js/jq.appframework.js"></script>    
+-->
+  
+    <script type="text/javascript" charset="utf-8" src="js/appframework.js"></script>  
+    <script type="text/javascript" charset="utf-8" src="js/appframework.ui.js"></script>     
+
+    <!-- Appframework Plugin JS -->
+
+    <script type="text/javascript" charset="utf-8" src="js/af.carousel.js"></script>          
+
+    <script>
+        // if(!((window.DocumentTouch&&document instanceof DocumentTouch)||'ontouchstart' in window)){
+        //     var script=document.createElement("script");
+        //     script.src="js/jq.desktopBrowsers.js";
+        //     var tag=$("head").append(script);
+        // }
+        var onDeviceReady = function () {
+            $.ui.blockPageScroll()
+        };
+
+        $(document).ready(function(){
+            $.ui.useOSThemes=false; //This must be set before $(document).ready() triggers;
+            $.ui.backButtonText="Back";            
+        });
+
+    </script>    
+    <script src="js/jq.desktopBrowsers.js"></script> 
+
+    <!-- include touch on desktop browsers only, uncomment script above if you only want desktopBrowsers.js to load when on desktop-->
+
+</head>
+
+<body  id="list_feed">
+    <div id="afui">         
+        <!-- <div id="header"> -->
+            <!-- any additional HTML you want can go here -->
+        <!-- </div>           -->
+        
+
+        <div id="content"> <!-- Content Opening tag -->
+
+        <!-- Side Navigations -->
+
+        <nav id="main_nav"> <!-- Globel Nav -->
+            <!-- <h3 class='title'>Filters</h3> -->
+            <ul class="list">
+                <li class="divider">Filters</li>
+                <li class="filters btn" id="filter-none">Show all</li>
+                <li class="sort filters" data-sort="cost">Price: Lowest - Highest</li> 
+                <li class="sort filters" data-sort="name">Name</li>                            
+                <li class="divider">Show Only</li>
+                <li class="filters btn" id="filter-dress">Dresses</li>
+                <li class="filters btn" id="filter-skirt">Skirt</li>
+                <li class="filters btn" id="filter-pants">Pants</li>                    
+            </ul>
+        </nav>
+
+          <div title='THRIFTER' id="main" data-tab="navbar_home" class="panel feed_panel" data-nav="main_nav" >    
+
+            <div>
+                <input id="feed_search" class="search" type="search" placeholder="Looking for Something?" />
+                <!-- <ul class="sort-by"> -->
+                    <!-- <button class="sort btn" data-sort="name">Sort by name</button> -->
+                    <!-- <button class="sort btn" data-sort="category">Sort by category</button> -->
+                    <!-- <button class="sort btn" data-sort="cost">Sort by cost ^</button> -->
+                <!-- </ul> -->
+                <!-- <ul class="filter"> -->
+                    <!-- <button class="btn" id="filter-none">Show all</button> -->
+                    <!-- <button class="btn" id="filter-dress">Only show dress</button> -->
+                    <!-- <button class="btn" id="filter-skirt">Only show skirt</button> -->
+                    <!-- <button class="btn" id="filter-pants">Only show pants</button> -->
+                <!-- </ul>                         -->
+
+                <div class="list">
+                    
+                        <div class="slide_main">
+                           <div class="slide_row">
+                                <a class="photo_box" href="#photo">
+                                    <img src="img/1.jpg" alt="">
+                                </a>                            
+                                <div class="boxing">
+                                    <h3 class="name">1. Blue Dress</h3>
+                                    <p>Size: Medium</p>
+                                    <span class="category">dress</span>
+                                    <p>Store: Housing Work<p>                               
+                                    <p>Location: Bushwich, Brooklyn</p> 
+                                    <p class="cost">$10</p> 
+                                    <span class="time"><b>3hrs Left</b></span>
+                                    <span class="price">Buy&nbsp<b>$25</b>&nbspBid&nbsp<b>$22</b></span>
+                                    <div class="pull_bar"></div>
+                                    <div class="pull_bar"></div>                   
+                                </div>                            
+                            </div>
+                           <div class="slide_row">                            
+                                <div class="boxing_right">
+                                    <div class="pull_bar_right"></div>
+                                    <div class="pull_bar_right"></div>                                  
+                                    <p>DESCRIPTION: <br>
+                                        The dress is a size small, but is very forgiving. It has cap sleeves, a V neckline in the front and back, and falls about 6" below the knee. 
+                                    </p>
+                                    <a href="#buy" class="btn button_buy">BUY $25</a>
+                                    <a href="#bid" class="btn button_buy">BID $22</a>
+                                </div>
+                           </div>
+                        </div>
+                
+        <!-- Item Group  -->
+
+                    <div class="slide_main">
+                       <div class="slide_row">
+                            <a class="photo_box" href="#photo">
+                                <img src="img/2.jpg" alt="">
+                            </a>                            
+                            <div class="boxing">
+                                <h3 class="name">2. Beautiful Pleated Dress Sheath, Size 12, White</h3>
+                                <span class="category">skirt</span>
+                                <p>Store: Finderz Keeperz<p>    
+                                <p>Location: Upper East Side, Manhattan</p>                
+                                <p class="cost">$12</p>              
+                                <span class="time"><b>3hrs Left</b></span>
+                                <span class="price">Buy&nbsp<b>$50</b>&nbspBid&nbsp<b>$39</b></span>
+                                <div class="pull_bar"></div>
+                                <div class="pull_bar"></div>                   
+                            </div>                            
+                        </div>
+                       <div class="slide_row">                            
+                            <div class="boxing_right">
+                                <div class="pull_bar_right"></div>
+                                <div class="pull_bar_right"></div>                                  
+                                <p>DESCRIPTION: <br>
+                                    Linen Dress, BUST 34", 86,3CM, WAIST 29", 73,7 CM, HIPS 64", 162,5 CM ,LENGTH 41", 104,1 CM, VERY GOOD EXCELLENT CONDITION
+                                </p>
+                                <a href="#buy" class="btn button_buy">BUY $50</a>
+                                <a href="#bid" class="btn button_buy">BID $39</a>
+                            </div>
+                       </div>
+                    </div>  
+
+        <!-- Item Group  -->
+
+                    <div class="slide_main">
+                       <div class="slide_row">
+                            <a class="photo_box" href="#photo">
+                                <img src="img/3.jpg" alt="">
+                            </a>                            
+                            <div class="boxing">
+                                <h3 class="name">3. Beautiful Pleated Dress Sheath, Size 12, White</h3>
+                                <span class="category">dress</span>
+                                <p>Store: Finderz Keeperz<p>    
+                                <p>Location: Upper East Side, Manhattan</p>                             
+                                <p class="cost">$15</p> 
+                                <span class="time"><b>3hrs Left</b></span>
+                                <span class="price">Buy&nbsp<b>$50</b>&nbspBid&nbsp<b>$39</b></span>
+                                <div class="pull_bar"></div>
+                                <div class="pull_bar"></div>                   
+                            </div>                            
+                        </div>
+                       <div class="slide_row">                            
+                            <div class="boxing_right">
+                                <div class="pull_bar_right"></div>
+                                <div class="pull_bar_right"></div>                                  
+                                <p>DESCRIPTION: <br>
+                                    Linen Dress, BUST 34", 86,3CM, WAIST 29", 73,7 CM, HIPS 64", 162,5 CM ,LENGTH 41", 104,1 CM, VERY GOOD EXCELLENT CONDITION
+                                </p>
+                                <a href="#buy" class="btn button_buy">BUY $50</a>
+                                <a href="#bid" class="btn button_buy">BID $39</a>
+                            </div>
+                       </div>
+                    </div>  
+
+        <!-- Item Group  -->
+
+                    <div class="slide_main">
+                       <div class="slide_row">
+                            <a class="photo_box" href="#photo">
+                                <img src="img/4.jpg" alt="">
+                            </a>                            
+                            <div class="boxing">
+                                <h3 class="name">4. Beautiful Pleated Dress Sheath, Size 12, White</h3>
+                                <span class="category">pants</span>
+                                <p>Store: Finderz Keeperz<p>    
+                                <p>Location: Upper East Side, Manhattan</p>                             
+                                <p class="cost">$18</p> 
+                                <span class="time"><b>3hrs Left</b></span>
+                                <span class="price">Buy&nbsp<b>$50</b>&nbspBid&nbsp<b>$39</b></span>
+                                <div class="pull_bar"></div>
+                                <div class="pull_bar"></div>                   
+                            </div>                            
+                        </div>
+                       <div class="slide_row">                            
+                            <div class="boxing_right">
+                                <div class="pull_bar_right"></div>
+                                <div class="pull_bar_right"></div>                                  
+                                <p>DESCRIPTION: <br>
+                                    Linen Dress, BUST 34", 86,3CM, WAIST 29", 73,7 CM, HIPS 64", 162,5 CM ,LENGTH 41", 104,1 CM, VERY GOOD EXCELLENT CONDITION
+                                </p>
+                                <a href="#buy" class="btn button_buy">BUY $50</a>
+                                <a href="#bid" class="btn button_buy">BID $39</a>
+                            </div>
+                       </div>
+                    </div>  
+
+        <!-- Item Group  -->
+
+                    <div class="slide_main">
+                       <div class="slide_row">
+                            <a class="photo_box" href="#photo">
+                                <img src="img/5.jpg" alt="">
+                            </a>                            
+                            <div class="boxing">
+                                <h3 class="name">5. Beautiful Pleated Dress Sheath, Size 12, White</h3>
+                                <span class="category">dress</span>
+
+                                <p>Store: Finderz Keeperz<p>    
+                                <p>Location: Upper East Side, Manhattan</p>                             
+                                <p class="cost">$20</p> 
+                                <span class="time"><b>3hrs Left</b></span>
+                                <span class="price">Buy&nbsp<b>$50</b>&nbspBid&nbsp<b>$39</b></span>
+                                <div class="pull_bar"></div>
+                                <div class="pull_bar"></div>                   
+                            </div>                            
+                        </div>
+                       <div class="slide_row">                            
+                            <div class="boxing_right">
+                                <div class="pull_bar_right"></div>
+                                <div class="pull_bar_right"></div>                                  
+                                <p>DESCRIPTION: <br>
+                                    Linen Dress, BUST 34", 86,3CM, WAIST 29", 73,7 CM, HIPS 64", 162,5 CM ,LENGTH 41", 104,1 CM, VERY GOOD EXCELLENT CONDITION
+                                </p>
+                                <a href="#buy" class="btn button_buy">BUY $50</a>
+                                <a href="#bid" class="btn button_buy">BID $39</a>
+                            </div>
+                       </div>
+                    </div>  
+
+
+
+
+        <!-- Item Group  -->
+
+                </div> <!-- list ends -->
+
+
+
+            </div> <!-- panel ends -->
+
+
+
+        </div> <!-- list feed (required for list.js) ends -->
+            
+            <div id="photo" data-tab="navbar_home" class="panel">    <img src="img/1.jpg" alt="">
+            </div>
+
+            <div id="buy" data-tab="navbar_home" class="panel" overflow="fixed" >
+                <div class="modal_box">
+                    <img src="img/1.jpg" alt="">
+                    <div class="wrapper">
+                        <h2>Victoria's Secret Blue Size Medium</h2>                             
+                        <h3><b>Buy Now:</b> $25</h3> 
+                    </div>
+
+                    <div class="wrapper2">
+                        
+                        <p><b>Description:</b> Cute, pink and gold owl vintage necklace. Great for both casual and formal wear. In great condition. </p>
+                    </div>
+                    
+                </div>              
+                    
+                <ul class="list inset">
+                    <li><a href="#"><h3>Buy Now with Paypal</h3></a></li>
+                    <li><a href="#"><h3>Buy Now with Debit</h3></a></li>
+                    <li><a href="#"><h3>Buy Now with Credit</h3></a></li>
+                </ul>
+            </div>
+
+            <div id="bid"  data-tab="navbar_home" class="panel" overflow="fixed" >
+                <h1>This is the BID SCREEN</h1>
+            </div>    
+
+
+    </div> <!-- content ends -->
+
+    <!-- Footer Nav -->
+    <!-- ############################################################### -->
+
+    <div id="navbar">            
+        <a href="#" data-transition="none" id='navbar_home' class='icon home' >Home</a>
+        <a href="#photo" data-transition="none" id='navbar_profile' class='icon user'>MY PROFILE</a>
+        <a href="#storylist" data-transition="none" id='navbar_saves' class='icon heart' >MY SAVES</a>
+
+    </div>              
+
+    <!-- Header Nav -->
+    <!-- ############################################################### -->
+
+    <div id="header">
+        <a id='menubadge' onclick='af.ui.toggleSideMenu()' class='menuButton'></a>
+    </div>    
+
+    <!-- <header id="Feed"> -->
+        <!-- <a id="backButton" onclick="$.ui.goBack()" class='button'>Go Back</a> -->
+            <!-- <h1>Custom Header</h1> -->
+
+    <!-- </header> -->
+
+</div> <!-- afui ends -->
+
+<script src="js/list.js"></script>
+
+<script src="js/main.js" type="text/javascript" charset="utf-8" async defer></script>
+    
+</body>
+</html>

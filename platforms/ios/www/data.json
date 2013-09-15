@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "name": "Victoria's Secret Blue Size Medium",
+      "size": "Medium",
+      "store": "Housing Works",
+      "time_left": "2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, ab, non, rem officia quo quisquam nisi voluptatem autem veritatis minus libero modi facilis! Corporis, dolorem!",
+      "buy_price": "30",
+      "auction_start": "12",
+      "image" : "1.jpg",
+      "gender" : "female"
+    },
+    {
+      "name": "Beautiful Pleated Dress Sheath, Size 12, White",
+      "size": "Large",
+      "store": "Housing Works",
+      "time_left": "3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, aliquam ipsam odit atque. Asperiores, nobis perspiciatis possimus dolorum neque! Architecto.",
+      "buy_price": "20",
+      "auction_start": "15",
+      "image" : "2.jpg",
+      "gender" : "male"
+    },         
+    {
+      "name": "Men's Jacket Blue - Levis",
+      "size": "Large",
+      "store": "Housing Works",
+      "time_left": "3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, aliquam ipsam odit atque. Asperiores, nobis perspiciatis possimus dolorum neque! Architecto.",
+      "buy_price": "20",
+      "auction_start": "15",
+      "image" : "3.jpg",
+      "gender" : "male"
+    },         
+    {
+      "name": "High-Low Skirt XS/S (Lot Of 2)",
+      "size": "Large",
+      "store": "Housing Works",
+      "time_left": "3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, aliquam ipsam odit atque. Asperiores, nobis perspiciatis possimus dolorum neque! Architecto.",
+      "buy_price": "20",
+      "auction_start": "15",
+      "image" : "4.jpg",
+      "gender" : "female"
+    },            
+    {
+      "name": "Owl Necklace",
+      "size": "all",
+      "store": "Housing Works",
+      "time_left": "3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, aliquam ipsam odit atque. Asperiores, nobis perspiciatis possimus dolorum neque! Architecto.",
+      "buy_price": "20",
+      "auction_start": "15",
+      "image" : "5.jpg",
+      "gender" : "all"
+    },    
+    {
+      "name": "Colleen Conrad Size S 4 6 Black Dress",
+      "size": "Medium",
+      "store": "Housing Works",
+      "time_left": "3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, aliquam ipsam odit atque. Asperiores, nobis perspiciatis possimus dolorum neque! Architecto.",
+      "buy_price": "20",
+      "auction_start": "15",
+      "image" : "7.jpg",
+      "gender" : "female"
+    },                    
+    {
+      "name": "Victoria's Secret Blue Size Medium",
+      "size": "Medium",
+      "store": "Housing Works",
+      "time_left": "2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, ab, non, rem officia quo quisquam nisi voluptatem autem veritatis minus libero modi facilis! Corporis, dolorem!",
+      "buy_price": "30",
+      "auction_start": "12",
+      "image" : "1.jpg",
+      "gender" : "female"
+    }
+  ]
+}
