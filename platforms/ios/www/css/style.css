@@ -6,6 +6,9 @@
 #afui #menu .list li, #afui #menu .list .divider, #afui #menu .list li:first-child, #afui #menu .list li:last-child { 
 	font-weight: inherit;
 }
+#afui .panel h2 {
+	color: #111;
+}
 
 /* END */
 
@@ -67,8 +70,8 @@ h3 {
 }
 
 #afui #navbar a {
-	top: 2px!important;
-	height: 47px;
+	top: 0px!important;
+	height: 50px;
 }
 #afui > #menu.tabletMenu {
 	background-color: #e1e1e1;
@@ -86,6 +89,9 @@ h3 {
 
 #afui #menu .list .divider {
 	background: #FDA275;
+}
+#afui .list.inset {
+	margin: 10px!important;
 }
 /* Feed Panel */
 
@@ -164,6 +170,7 @@ h3 {
 	bottom: 0;
 	font-size: 0.9em;
 	color: #444;
+	left: 0;
 }
 .boxing .price {
 	float: right;
@@ -258,7 +265,8 @@ h3 {
 	margin: 1em;
 }
 .modal_box h2 {
-	margin: 0!important;
+	
+	margin-bottom: 0.8em!important;
 }
 .modal_box p {
 	color: #444;

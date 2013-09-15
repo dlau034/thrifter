@@ -54,6 +54,11 @@
 		5AEE5B35173C68D80009041E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEE5B34173C68D80009041E /* CoreLocation.framework */; };
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
+		D563708017E644B600FEABE4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D563707F17E644B600FEABE4 /* Default-568h@2x.png */; };
+		D563708217E644F300FEABE4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D563708117E644F300FEABE4 /* Default@2x.png */; };
+		D563708417E6452C00FEABE4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D563708317E6452C00FEABE4 /* Default.png */; };
+		D563708617E6467E00FEABE4 /* logo_114px.png in Resources */ = {isa = PBXBuildFile; fileRef = D563708517E6467E00FEABE4 /* logo_114px.png */; };
+		D563708817E6468000FEABE4 /* logo_57px.png in Resources */ = {isa = PBXBuildFile; fileRef = D563708717E6468000FEABE4 /* logo_57px.png */; };
 		D5F22D7A17DE783F00E67168 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
 /* End PBXBuildFile section */
@@ -133,6 +138,11 @@
 		5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* Thrifter-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Thrifter-Info.plist"; path = "../Thrifter-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
+		D563707F17E644B600FEABE4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D563708117E644F300FEABE4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D563708317E6452C00FEABE4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D563708517E6467E00FEABE4 /* logo_114px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_114px.png; sourceTree = "<group>"; };
+		D563708717E6468000FEABE4 /* logo_57px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_57px.png; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = Thrifter/config.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -227,6 +237,11 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				D563708717E6468000FEABE4 /* logo_57px.png */,
+				D563708517E6467E00FEABE4 /* logo_114px.png */,
+				D563708317E6452C00FEABE4 /* Default.png */,
+				D563708117E644F300FEABE4 /* Default@2x.png */,
+				D563707F17E644B600FEABE4 /* Default-568h@2x.png */,
 				F840E1F0165FE0F500CFE078 /* config.xml */,
 				301BF56E109A69640062928A /* www */,
 				301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */,
@@ -445,6 +460,11 @@
 				0AFBECCE17DBC2F00045ADC1 /* images.png in Resources */,
 				0AFBECD317DBC4000045ADC1 /* MFViewController.xib in Resources */,
 				D5F22D7A17DE783F00E67168 /* MainViewController.xib in Resources */,
+				D563708017E644B600FEABE4 /* Default-568h@2x.png in Resources */,
+				D563708217E644F300FEABE4 /* Default@2x.png in Resources */,
+				D563708417E6452C00FEABE4 /* Default.png in Resources */,
+				D563708617E6467E00FEABE4 /* logo_114px.png in Resources */,
+				D563708817E6468000FEABE4 /* logo_57px.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
