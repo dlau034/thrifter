@@ -68,8 +68,9 @@ function slider(){
 }; 
 
 $(window).load(function() {
-    slider();
     filter();
+    slider();
+    
 });
         
 

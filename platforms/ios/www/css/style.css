@@ -168,7 +168,7 @@ h3 {
 .boxing .time {
 	position: absolute;
 	bottom: 0;
-	font-size: 0.9em;
+	font-size: 1.2em;
 	color: #444;
 	left: 0;
 }
@@ -177,7 +177,7 @@ h3 {
 	bottom: 0;
 	position: absolute;
 	right: 22px;
-	font-size: 0.9em;
+	font-size: 1.2em;
 	color: #333;
 }
 .boxing_right p {
