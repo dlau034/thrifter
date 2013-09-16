@@ -39,7 +39,7 @@
 
 </head>
 
-<body  id="list_feed">
+<body id="list_feed">
     <div id="afui">         
 
         <div id="content"> <!-- Content Opening tag -->
@@ -49,14 +49,15 @@
         <nav id="main_nav"> <!-- Globel Nav -->
             <!-- <h3 class='title'>Filters</h3> -->
             <ul class="list">
-                <li class="divider">Filters</li>
+                <li class="divider">Sort By</li>
                 <li class="filters btn" id="filter-none">Show all</li>
-                <li class="sort filters" data-sort="cost">Price: Lowest - Highest</li> 
-                <li class="sort filters" data-sort="name">Name</li>                            
+                <li class="sort filters" data-sort="price">Price: Lowest - Highest</li> 
+                <li class="sort filters" data-sort="brand">Brand Names</li>                            
                 <li class="divider">Show Only</li>
                 <li class="filters btn" id="filter-dress">Dresses</li>
                 <li class="filters btn" id="filter-skirt">Skirt</li>
-                <li class="filters btn" id="filter-pants">Pants</li>                    
+                <li class="filters btn" id="filter-shoes">Shoes</li>                    
+                <li class="filters btn" id="filter-accessories">Accessories</li>                    
             </ul>
         </nav>
 
@@ -112,10 +113,14 @@
                                         </a>                            
                                         <div class="boxing">
                                             <h3 class="name">{{name}}</h3>                               
-                                            <p class="category">{{tag}}</p>
+                                            <p class="size">Size: {{size}}</p>
+                                            <p class="brand">Brand: {{brand}}</p>
+                                            <p>Category: <span class="category">{{tag}}</span></p>
                                             <p>Store: {{store}}<p>    
-                                            <span class="time"><b>{{time_left}}</b>hrs Remain</span>
-                                            <span class="price">Buy&nbsp<b>${{buy_price}}</b>&nbspBid&nbsp<b>${{auction_start}}</b></span>
+                                            <span class="time"><b>{{time_left}}</b> Remain</span>
+
+                                            
+                                            <span class="pricing">Buy&nbsp<b>$<span class="price">{{buy_price}}</span></b>&nbspBid&nbsp<b>${{auction_start}}</b></span><span>
 
                                             <div class="pull_bar"></div>
                                             <div class="pull_bar"></div>                                                 
@@ -149,11 +154,15 @@
                 <div class="modal_box">
                     <img src="img/1.jpg" alt="">
                     <div class="wrapper">
-                        <h2>Victoria's Secret Blue Size Medium</h2>                             
-                        <h3><b>Buy Now:</b> $25</h3> 
+                        <h2>Victoria's Secret Blue Size Medium
+                        <b>Buy Now:</b> $30</h2> 
                     </div>
                     <div class="wrapper2">                        
-                        <p><b>Description:</b> Cute, pink and gold owl vintage necklace. Great for both casual and formal wear. In great condition. </p>
+                        <p><b>Brand:</b>Victoria's Secret Blue Size</p>
+                        <p><b>Size:</b> Medium</p>
+                        <p><b>Store:</b> Beacon’s Closet</p>
+                        <p><b>Catagory:</b> dress</p>
+                        <p><b>Description:</b> Worn, but in great condition, soft fabric with a relaxed, comfortable silhouette, No wear or tear. Great summer dress for a nice day out </p>
                     </div>
                     
                 </div>              

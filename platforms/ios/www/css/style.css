@@ -172,7 +172,7 @@ h3 {
 	color: #444;
 	left: 0;
 }
-.boxing .price {
+.boxing .pricing {
 	float: right;
 	bottom: 0;
 	position: absolute;
@@ -273,7 +273,7 @@ h3 {
 }
 .modal_box img {
 	width: 150px;
-	border: 7px solid white!important;
+	/*border: 7px solid white!important;*/
 	float: left;
 	margin-bottom: 1em;
 }

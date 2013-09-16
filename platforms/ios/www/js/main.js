@@ -2,16 +2,20 @@ $.ui.blockPageScroll()
 $.ui.useOSThemes=false;
 $.ui.backButtonText="Back";           
 
+$(".filters").click(function(){
+    $.ui.toggleSideMenu(false);
+});
 
 function filter(){
     var options = {
-        valueNames: [ 'name', 'cost', 'category' ]
+        valueNames: [ 'name', 'price', 'category', 'brand' ]
     };
 
     var featureList = new List('list_feed', options);
 
     $('#filter-skirt').click(function() {
         console.log("skirt");
+         // $.ui.toggleSideMenu(false)
         featureList.filter(function(item) {
             if (item.values().category == "skirt") {                
                 return true;
@@ -24,6 +28,7 @@ function filter(){
 
     $('#filter-dress').click(function() {
         console.log("dress");
+        // $.ui.toggleSideMenu(false)
         featureList.filter(function(item) {
             if (item.values().category == "dress") {                
                 return true;
@@ -34,10 +39,11 @@ function filter(){
         return false;
     });
 
-    $('#filter-pants').click(function() {
-        console.log("pants");
+    $('#filter-shoes').click(function() {
+        console.log("shoes");
+        // $.ui.toggleSideMenu(false)
         featureList.filter(function(item) {
-            if (item.values().category == "pants") {                
+            if (item.values().category == "shoes") {                
                 return true;
             } else {
                 return false;
@@ -46,9 +52,22 @@ function filter(){
         return false;
     });    
 
+    $('#filter-accessories').click(function() {
+        console.log("accessories");
+        // $.ui.toggleSideMenu(false)
+        featureList.filter(function(item) {
+            if (item.values().category == "accessories") {                
+                return true;
+            } else {
+                return false;
+            }
+        });
+        return false;
+    });        
+
     $('#filter-none').click(function() {
         featureList.filter();
-        console.log("none");
+        console.log("show all");
         return false;
     });       
     console.log("filter")              
