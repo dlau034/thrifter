@@ -6,6 +6,8 @@ $(".filters").click(function(){
     $.ui.toggleSideMenu(false);
 });
 
+// Index and applies the filters to the data
+
 function filter(){
     var options = {
         valueNames: [ 'name', 'price', 'category', 'brand' ]
@@ -73,6 +75,8 @@ function filter(){
     console.log("filter")              
 };
 
+// Appframework Carousal 
+
 function slider(){
     var options={
        vertical:false, // page up/down
@@ -86,10 +90,11 @@ function slider(){
     console.log("slider")         
 }; 
 
+// When data.json is loaded, filter and slider is index
+
 $(window).load(function() {
     filter();
-    slider();
-    
+    slider();    
 });
         
 

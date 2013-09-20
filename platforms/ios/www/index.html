@@ -209,19 +209,24 @@
     <script src="js/handlebars.js"></script>
 
     <script>
-        $.getJSON('data.json', function(d) {
-            var data = d.items
-            console.log(data);
+        var data = [];
 
-            var template = Handlebars.compile( $('#template').html() );
-            
-            temp = template(data);
+        var template = Handlebars.compile( $('#template').html() );            
 
-            // console.log(temp);
+        $.getJSON("data.json", function(d) {
+            data = d.items
 
             $("#container").append( template(data) );
         });
-        
+
+
+        function addName(a, b) {                
+            data.unshift({name: a, brand: b});        
+
+            $("#container").html( template(data) );
+            filter();
+            slider();
+        };        
     </script>
 
     <script src="js/list.js"></script>
